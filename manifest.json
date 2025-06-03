@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Looper For Youtube",
+    "description": "loops the youtube video with certain Timestamps",
+    "version": "1.0.0",
+    "content_scripts":[{"matches": ["https://www.youtube.com/*"], "js": ["contentScript.js"]}],
+    "permissions": ["scripting","activeTab","storage"],
+    "background": {"service_worker": "BackgroundScript.js"},
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "loop.png"
+    }
+
+
+}
